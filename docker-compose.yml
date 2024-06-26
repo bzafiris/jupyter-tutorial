@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  jupyter:
+    image: quay.io/jupyter/datascience-notebook:2024-06-10
+    restart: always
+    volumes:
+      - ./data:/home/jovyan/data
+      - ./notebooks:/home/jovyan/work
+    ports:
+      - 8888:8888
